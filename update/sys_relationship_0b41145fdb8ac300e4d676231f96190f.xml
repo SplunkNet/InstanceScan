@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_relationship">
+    <sys_relationship action="INSERT_OR_UPDATE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_vaab_auditnow_update_diagnostic</basic_apply_to>
+        <basic_query_from>sys_update_version</basic_query_from>
+        <insert_callback/>
+        <name>Update Versions</name>
+        <query_from/>
+        <query_with><![CDATA[(function refineQuery(current, parent) {
+	
+	var updateName = (parent.update_name) ? "" + parent.update_name : "N/A____";
+	
+	current.addQuery("name", updateName);
+
+})(current, parent);]]></query_with>
+        <reference_field>application</reference_field>
+        <related_list/>
+        <simple_reference>false</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>dan.berglin@verano.se</sys_created_by>
+        <sys_created_on>2017-10-31 15:57:16</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0b41145fdb8ac300e4d676231f96190f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Update Versions</sys_name>
+        <sys_package display_value="AuditNow" source="x_vaab_auditnow">ea319b87db0ac300e4d676231f961993</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AuditNow">ea319b87db0ac300e4d676231f961993</sys_scope>
+        <sys_update_name>sys_relationship_0b41145fdb8ac300e4d676231f96190f</sys_update_name>
+        <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+        <sys_updated_on>2017-10-31 16:00:54</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="delete_multiple" query="documentkey=0b41145fdb8ac300e4d676231f96190f"/>
+</record_update>

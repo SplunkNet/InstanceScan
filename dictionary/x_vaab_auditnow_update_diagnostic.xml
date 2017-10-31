@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Update Diagnostic" max_length="40" name="x_vaab_auditnow_update_diagnostic" type="collection">
+        <element label="Created by Customer" max_length="40" name="created_by_customer" type="boolean"/>
+        <element attributes="base_start=true" label="Defined in Table" max_length="80" name="defined_in_table" type="table_name"/>
+        <element label="Inherited" max_length="40" name="inherited" type="boolean"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Overwrite on Update" max_length="40" name="overwrite_on_update" type="boolean"/>
+        <element attributes="base_start=true" label="Runs on Table" max_length="80" name="runs_on_table" type="table_name"/>
+        <element label="Script" max_length="4000" name="script" type="script"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element label="Custom Standalone" sequence="0" value="Custom Standalone"/>
+                <element label="OOB Overwritten" sequence="1" value="OOB Overwritten"/>
+                <element label="OOB Restored" sequence="2" value="OOB Restored"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" label="Target Name" max_length="40" name="target_name" type="string"/>
+        <element dependent="defined_in_table" dependent_on_field="defined_in_table" label="Target Record" max_length="32" name="target_record" type="document_id" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="type" type="string">
+            <choice>
+                <element label="Script" sequence="0" value="Script"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Update Name" max_length="40" name="update_name" type="string"/>
+        <element label="Update Record" max_length="32" name="update_record" reference="sys_update_xml" type="reference"/>
+        <element label="Update Set" max_length="32" name="update_set" reference="sys_update_set" type="reference"/>
+        <index name="index">
+            <element name="update_record"/>
+        </index>
+        <index name="index2">
+            <element name="update_set"/>
+        </index>
+        <index name="index3">
+            <element name="target_record"/>
+        </index>
+    </element>
+</database>

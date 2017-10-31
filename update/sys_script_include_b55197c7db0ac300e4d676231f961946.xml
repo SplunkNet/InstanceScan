@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_vaab_auditnow.V_instanceAnalyser</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>V_instanceAnalyser</name>
+        <script><![CDATA[var V_instanceAnalyser = Class.create();
+V_instanceAnalyser.prototype = {
+	initialize: function() {
+		this.SCRIPT_USAGE_TABLE = "x_vaab_auditnow_update_diagnostic";
+		return this;
+	},
+	runAssessment: function(){
+		this.resetScriptUsage();
+		this.getCustomerUpdateScripts();
+	},
+	getCustomerUpdateScripts: function() {
+				
+		var custUpdtGr = new GlideRecord("sys_update_xml");
+			custUpdtGr.addEncodedQuery("nameLIKE_script_^nameNOT LIKEsys_documentation" + 
+										  "^type!=List Layout^ORtype=NULL^type!=Dictionary^ORtype=NULL");
+			custUpdtGr.orderBy('name');
+			custUpdtGr.orderByDesc('sys_updated_on');
+			custUpdtGr.query();
+		
+			var lastVisited='';
+		
+			while(custUpdtGr.next()) {
+				var targetGr;
+				var name = custUpdtGr.name.toString();
+
+				if(lastVisited == name) 
+					continue;
+				
+				//if(custUpdtGr.replace_on_upgrade)
+					//continue;
+				
+				lastVisited=name;
+				
+				var xmlDoc = new XMLDocument2();
+					xmlDoc.parseXML(custUpdtGr.payload);
+				
+				var contentNode = xmlDoc.getNode("record_update");
+				var targetTable = contentNode.getAttribute("table");
+				var sysId = xmlDoc.getNodeText("//sys_id");
+				var customerUpdate = xmlDoc.getNodeText("//sys_customer_update");
+				var targetName = "" + custUpdtGr.target_name;
+				var customUpdateState = this.getCustomState("" + custUpdtGr.name);
+				
+				if(targetTable && sysId)
+					targetGr = this.getTargetGr(targetTable, sysId);
+				
+				var scriptUsageGr = new GlideRecord(this.SCRIPT_USAGE_TABLE);
+					scriptUsageGr.initialize();
+					scriptUsageGr.update_record = custUpdtGr.sys_id;
+					scriptUsageGr.update_set = custUpdtGr.update_set.sys_id;
+					scriptUsageGr.state = customUpdateState;
+					scriptUsageGr.type  = "Script";
+					scriptUsageGr.defined_in_table = targetTable;
+					scriptUsageGr.update_name = custUpdtGr.name;
+					scriptUsageGr.target_name = targetName;
+					scriptUsageGr.target_record = sysId;
+					scriptUsageGr.created_by_customer = (customUpdateState == "Custom Standalone") ? true : false;
+					scriptUsageGr.overwrite_on_update = custUpdtGr.replace_on_upgrade;
+				
+					if(targetGr && targetGr.isValidField("collection"))
+						scriptUsageGr.runs_on_table.setDisplayValue("" + targetGr.collection);
+					
+					if(targetGr && targetGr.isValidField("script"))
+						scriptUsageGr.script = targetGr.script;
+				
+					scriptUsageGr.insert();
+				
+				gs.addInfoMessage(targetTable + " " + targetName);
+			}
+		
+	},
+	
+	resetScriptUsage: function() {
+		var scriptUsageGr = new GlideRecord(this.SCRIPT_USAGE_TABLE);
+			scriptUsageGr.deleteMultiple();
+	},
+	analyzeScriptUsage: function() {
+		var scriptStr, scriptRows, tblName;
+		var updatedBy = "dan.berglin@verano.se",
+			createdBy = "dan.berglin@verano.se",
+			
+		scrCnt = 0,
+		gsLogCnt = 0,
+		tbls = [];
+		
+		this.resetScriptUsage();
+		
+		var tblGr = new GlideRecord("sys_db_object");
+			tblGr.addEncodedQuery("sys_update_nameISNOTEMPTY^nameLIKEscript^nameNOT LIKE$^nameNOT LIKEv_");
+			tblGr.query();
+		
+		while( tblGr.next() )
+			tbls.push("" + tblGr.name );
+		
+		var tblCnt = 0 + tbls.length || 0;
+		
+		while(tblCnt--) {
+			var outMsg = "";
+			tblName = tbls[tblCnt];
+			var scrTblGr = new GlideRecord( tblName );
+				scrTblGr.addQuery( "sys_updated_by", updatedBy )
+						.addOrCondition("sys_created_by", createdBy );
+			
+				scrTblGr.query();
+			
+			scrCnt += (scrTblGr ? 0 + scrTblGr.getRowCount() : 0) | 0;
+			
+			while( scrTblGr.next() ) {
+				if( !scrTblGr.isValidField( "script" ) )
+					continue;
+				
+				scriptStr = "" + scrTblGr.script;
+				scriptRows = 0 + scriptStr.split("\n").length || 0;
+				
+				if(scriptRows) {
+					if(outMsg != "")
+						outMsg += "\n";
+					
+					outMsg +=   "Table: " + tblName +
+								", Script Name: " + scrTblGr.name +
+								", Script row count: " + scriptRows;
+					
+					var scriptUsageGr = new GlideRecord(this.SCRIPT_USAGE_TABLE);
+						scriptUsageGr.initialize();
+						scriptUsageGr.script_name = scrTblGr.name;
+						scriptUsageGr.script_table = scrTblGr.collection;
+						scriptUsageGr.table.setDisplayValue(tblName);
+						scriptUsageGr.script = scrTblGr.script;
+						scriptUsageGr.insert();
+					
+				}
+			}
+			gs.addInfoMessage(outMsg);
+		}
+		
+		gs.addInfoMessage("Scripts found: " + scrCnt);		
+	},
+	getTargetGr: function(tableName, sysId){
+		var gr = new GlideRecord(tableName);
+		if( gr.get(sysId));
+			return gr;
+	},
+	getCustomState: function(updateName) {
+		var gr = new ScopedGlideRecord("sys_update_version");
+			gr.addQuery("name", updateName);
+			gr.addQuery("source_table", "sys_upgrade_history");
+			gr.orderByDesc("sys_created_on");
+			gr.query();
+			if(gr.next()) {
+				if(gr.state == "current")
+					return "OOB Restored";
+				
+				else if(gr.state == "previous")
+					return "OOB Overwritten";
+			}
+		return "Custom Standalone";
+	},
+	getAdmins: function() {
+
+	},
+	type: 'V_instanceAnalyser'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dan.berglin@verano.se</sys_created_by>
+        <sys_created_on>2017-10-31 11:21:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b55197c7db0ac300e4d676231f961946</sys_id>
+        <sys_mod_count>75</sys_mod_count>
+        <sys_name>V_instanceAnalyser</sys_name>
+        <sys_package display_value="AuditNow" source="x_vaab_auditnow">ea319b87db0ac300e4d676231f961993</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AuditNow">ea319b87db0ac300e4d676231f961993</sys_scope>
+        <sys_update_name>sys_script_include_b55197c7db0ac300e4d676231f961946</sys_update_name>
+        <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+        <sys_updated_on>2017-10-31 15:52:55</sys_updated_on>
+    </sys_script_include>
+</record_update>

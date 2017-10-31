@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>Check Script Usage</name>
+        <run_once>false</run_once>
+        <script><![CDATA[x_vaab_auditnow.V_instanceAnalyser.analyzeScriptUsage();]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>dan.berglin@verano.se</sys_created_by>
+        <sys_created_on>2017-10-31 11:29:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3f44db4bdb0ac300e4d676231f9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Check Script Usage</sys_name>
+        <sys_package display_value="AuditNow" source="x_vaab_auditnow">ea319b87db0ac300e4d676231f961993</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AuditNow">ea319b87db0ac300e4d676231f961993</sys_scope>
+        <sys_update_name>sys_script_fix_3f44db4bdb0ac300e4d676231f9619a3</sys_update_name>
+        <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+        <sys_updated_on>2017-10-31 11:29:24</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

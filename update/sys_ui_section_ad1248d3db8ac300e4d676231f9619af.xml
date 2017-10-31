@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_ui_section caption="" section_id="ad1248d3db8ac300e4d676231f9619af" sys_domain="global" table="x_vaab_auditnow_update_diagnostic" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>10e0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>1</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>90e0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>target_name</element>
+            <position>2</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>14e0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>update_name</element>
+            <position>3</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>94e0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <position>4</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>18e0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>5</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>98e0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>defined_in_table</element>
+            <position>6</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>1ce0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>runs_on_table</element>
+            <position>7</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>9ce0dc1fdb8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>8</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>10e0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>created_by_customer</element>
+            <position>9</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>90e0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>overwrite_on_update</element>
+            <position>10</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>14e0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>inherited</element>
+            <position>11</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>94e0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>target_record</element>
+            <position>12</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>18e0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>update_record</element>
+            <position>13</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>98e0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>update_set</element>
+            <position>14</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>1ce0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>15</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>9ce0dc1fdb8ac300e4d676231f9619ae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>script</element>
+            <position>16</position>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 15:53:25</sys_created_on>
+            <sys_id>10e0dc1fdb8ac300e4d676231f9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_vaab_auditnow_update_diagnostic" sys_domain="global" view="Default view">ad1248d3db8ac300e4d676231f9619af</sys_ui_section>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 15:53:25</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_vaab_auditnow_update_diagnostic</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 14:48:47</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ad1248d3db8ac300e4d676231f9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_vaab_auditnow_update_diagnostic</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="AuditNow" source="x_vaab_auditnow">ea319b87db0ac300e4d676231f961993</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="AuditNow">ea319b87db0ac300e4d676231f961993</sys_scope>
+            <sys_update_name>sys_ui_section_ad1248d3db8ac300e4d676231f9619af</sys_update_name>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 14:48:47</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

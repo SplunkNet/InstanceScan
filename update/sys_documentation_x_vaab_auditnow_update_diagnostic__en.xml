@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="" label="Update Diagnostic" language="en" table="x_vaab_auditnow_update_diagnostic">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Update Diagnostic</label>
+            <language>en</language>
+            <name>x_vaab_auditnow_update_diagnostic</name>
+            <plural>Update Diagnostics</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>dan.berglin@verano.se</sys_created_by>
+            <sys_created_on>2017-10-31 14:48:08</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>ccf108d3db8ac300e4d676231f9619ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Update Diagnostic</sys_name>
+            <sys_package display_value="AuditNow" source="x_vaab_auditnow">ea319b87db0ac300e4d676231f961993</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="AuditNow">ea319b87db0ac300e4d676231f961993</sys_scope>
+            <sys_update_name>sys_documentation_x_vaab_auditnow_update_diagnostic__en</sys_update_name>
+            <sys_updated_by>dan.berglin@verano.se</sys_updated_by>
+            <sys_updated_on>2017-10-31 14:48:08</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
